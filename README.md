@@ -153,6 +153,10 @@ set splitbelow
 set splitright
 ```
 
+To enable multiple-views, press ```:sp```, we see
+
+<img src="./imgs/multi_views.png">
+
 Use ```Ctrl``` + ```h``` /```j``` /```k``` /```l``` to switch among windows
 
 ```
