@@ -1,5 +1,5 @@
-<img src="./imgs/vim-logo.svg">
 # Turn VIM into Python IDE
+<img src="./imgs/vim-logo.svg">
 
 ## Background
 I've tried several editors for writing __Python__, such as Atom, Sublime, PyCharm, and even Bluefish. The issues I experienced bothered me, like Atom too fat, Sublime complicated plugin configuration, PyCharm uncertain runtime path... Eventually I decided to stay with my love, ```vi``` and ```vim``` that I've used for almost 20 years.
