@@ -5,10 +5,11 @@ I've tried several editors for writing __Python__, such as Atom, Sublime, PyChar
 
 There are multiple ways to configure VIM as Python IDE, through ```vundle```, ```pip3 install```, then I figured to have plugins managed by ```git``` and ```vundle```, the plugin manager. Therefore I write this document.
 
-Disclaimer:
+Notes:
 - This doc is written with Python3, not tested with Python2
 - Python's plugin are very various and many. I choose some as my personal experience only
 - I use Debian 9.6 with pre-installed ```vim```
+- All screenshots are captured from ```gvim```
 
 Personally I think that _the best practice to Enable VIM as Python IDE_ is https://realpython.com/vim-and-python-a-match-made-in-heaven/ with credits.
 
@@ -29,7 +30,7 @@ Huge version with GTK3 GUI.  Features included (+) or not (-):
 +cscope          +lispindent      +python3         +wildignore
 ```
 
-that indicates this pre-built ```vim``` (version 8.0) supports ```python3```
+that indicates this pre-built ```vim``` (version 8.0) supports ```python3```, but not ```python2```. Weird but this is default from _Debian Stretch 9.6_, with ```vim-tiny``` completely removed
 
 And verify in vim
 ```
@@ -130,6 +131,10 @@ Pressing ```Ctrl```+ ```p``` to enable search
 ```
 Plugin 'kien/ctrlp.vim'
 ```
+
+<img src="./imgs/supersearch.png">
+
+To search ```keras``` in all directories
 
 #### Powerline
 
