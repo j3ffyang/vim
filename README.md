@@ -1,3 +1,4 @@
+<img src="./imgs/vim-logo.svg">
 # Turn VIM into Python IDE
 
 ## Background
