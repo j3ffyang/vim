@@ -51,6 +51,21 @@ mkdir -p ~/.vim/{autoload,bundle}
 
 ```bundle``` holds all plugins
 
+#### pathogen
+Reference > https://github.com/tpope/vim-pathogen
+
+Simply install
+```
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+```
+
+Then add the following at the top of ```~/.vimrc```
+```
+execute pathogen#infect()
+
+```
+
 #### vundle
 ```
 touch ~/.vimrc
@@ -88,8 +103,9 @@ To enable it, get into ```vim```
 :PluginInstall
 ```
 
-#### python-mode
-This is a combo that contains lots of feature and submodules. See the details at reference doc > https://github.com/python-mode/python-mode
+
+#### ~~python-mode~~ (removed due to dup'd features)
+~~This is a combo that contains lots of feature and submodules. See the details at reference doc > https://github.com/python-mode/python-mode~~
 
 ```
 cd ~/.vim/bundle
