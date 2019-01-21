@@ -1,3 +1,7 @@
+" enable pathogen to kick in plugins automatically
+execute pathogen#infect()
+execute pathogen#helptags()
+
 set nocompatible              " required
 filetype off                  " required
 
@@ -48,8 +52,13 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix
 
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2
+
 " auto-indentation
-" Plugin 'vim-scripts/indentpython.vim'
+Plugin 'vim-scripts/indentpython.vim'
 
 " flagging unnecesary whitespace
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
@@ -61,6 +70,26 @@ set encoding=utf-8
 Bundle 'Valloric/YouCompleteMe'
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" syntax check/ highlighting
+Plugin 'vim-syntastic/syntastic'
+Plugin 'nvie/vim-flake8'
+let python_highlight_all=1
+syntax on
+
+" color schemes
+Plugin 'jnurmine/Zenburn'
+Plugin 'altercation/vim-colors-solarized'
+
+if has('gui_running')
+  set background=dark
+  colorscheme solarized
+else
+  colorscheme zenburn
+endif
+
+" switching between by F5
+call togglebg#map("<F5>")
 
 " file browsing
 Plugin 'scrooloose/nerdtree'
@@ -75,12 +104,17 @@ Plugin 'kien/ctrlp.vim'
 " line numbering
 set nu
 
+" git integration
+Plugin 'tpope/vim-fugitive'
+
 " powerline
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " system clipboard
 set clipboard=unnamed
 
+" vim in shell, add the folowing to ~/.inputrc
+" set editing-mode vi
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
