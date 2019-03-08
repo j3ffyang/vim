@@ -14,7 +14,11 @@ Notes:
 
 Personally I think that _the best practice to Enable VIM as Python IDE_ is https://realpython.com/vim-and-python-a-match-made-in-heaven/ with credits.
 
-My current ```~/.vimrc``` can be downloaded [here](./vimrc)
+My current ```~/.vimrc``` can be downloaded [./vimrc](./vimrc)
+
+> Reference to > https://github.com/fisadev/fisa-vim-config
+
+And another one at [./vimrc2](./vimrc2)
 
 ## VIM Pre-requisite
 ``
