@@ -16,7 +16,7 @@ Personally I think that _the best practice to Enable VIM as Python IDE_ is https
 
 My current ```~/.vimrc``` can be downloaded [./vimrc](./vimrc)
 
-> Reference to > https://github.com/fisadev/fisa-vim-config
+> Reference to > https://github.com/fisadev/fisa-vim-config and https://github.com/VundleVim/Vundle.vim/wiki/Examples
 
 And another one at [./vimrc2](./vimrc2)
 
