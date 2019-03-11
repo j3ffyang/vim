@@ -80,7 +80,7 @@ touch ~/.vimrc
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
-> Reference >  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+> Reference > https://github.com/VundleVim/Vundle.vim
 
 
 Then put the following at the top of ```~/.vimrc```
