@@ -58,7 +58,7 @@ mkdir -p ~/.vim/{autoload,bundle}
 ```bundle``` holds all plugins
 
 #### pathogen
-Reference > https://github.com/tpope/vim-pathogen
+> Reference > https://github.com/tpope/vim-pathogen
 
 Simply install
 ```
