@@ -55,36 +55,38 @@ Backup the existing ```~/.vimrc``` and ```~/.vim```!!!
 mkdir -p ~/.vim/{autoload,bundle}
 ```
 
-```bundle``` holds all plugins
+`bundle` holds all plugins
 
 #### pathogen
 > Reference > https://github.com/tpope/vim-pathogen
 
 Simply install
-```
+
+```sh
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
 
-Then add the following at the top of ```~/.vimrc```
-```
-execute pathogen#infect()
+Then add the following at the top of `~/.vimrc`
 
+```sh
+execute pathogen#infect()
 ```
 
 #### vundle
-```
+
+```sh
 touch ~/.vimrc
 ```
 
-```
+```sh
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 > Reference > https://github.com/VundleVim/Vundle.vim
 
 
 Then put the following at the top of ```~/.vimrc```
-```
+```sh
 set nocompatible              " required
 filetype off                  " required
 
@@ -111,7 +113,7 @@ filetype plugin indent on    " required
 > Tips: make sure all plugins being added before the last stance in ```~/.vimrc```. Read the above.
 
 To enable it, get into ```vim```
-```
+```sh
 :PluginInstall
 ```
 
@@ -119,7 +121,7 @@ To enable it, get into ```vim```
 #### ~~python-mode~~ (removed due to dup'd features)
 ~~This is a combo that contains lots of feature and submodules. See the details at reference doc > https://github.com/python-mode/python-mode~~
 
-```
+```sh
 cd ~/.vim/bundle
 git clone https://github.com/python-mode/python-mode.git
 cd python-mode
@@ -129,7 +131,7 @@ git submodule update --init --recursive
 #### Auto-Complete
 I think this is the most important plugin and makes VIM a _true_ Python IDE
 
-```
+```sh
 Bundle 'Valloric/YouCompleteMe'
 
 let g:ycm_autoclose_preview_window_after_completion=1
@@ -145,7 +147,7 @@ Screenshots of _auto-complete_ and display relative _document_ after pressing Ta
 
 #### File Browsing
 We can see the effect from the above screenshot. The files, from left navigation, are double-clickable into editing mode. Very fancy and nice.
-```
+```sh
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'  " use tab
 
@@ -157,7 +159,7 @@ let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 Pressing ```Ctrl```+ ```p``` to enable search
 
-```
+```sh
 Plugin 'kien/ctrlp.vim'
 ```
 
@@ -167,7 +169,7 @@ To search ```keras``` in all directories
 
 #### Powerline
 
-```
+```sh
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 ```
 <img src="./imgs/powerline.png">
@@ -177,7 +179,7 @@ Show status and file format
 ## Other Tweaks without Plugin
 #### Split Windows
 
-```
+```sh
 set splitbelow
 set splitright
 ```
@@ -188,7 +190,7 @@ To enable multiple-views, press ```:sp```, we see
 
 Use ```Ctrl``` + ```h``` /```j``` /```k``` /```l``` to switch among windows
 
-```
+```sh
 " split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -197,17 +199,17 @@ nnoremap <C-H> <C-W><C-H>
 ```
 
 #### UTF-8 Support
-```
+```sh
 set encoding=utf-8
 ```
 
 #### Set line-number
-```
+```sh
 set nu
 ```
 #### PEP8
 
-```
+```sh
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
