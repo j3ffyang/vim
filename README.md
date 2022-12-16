@@ -11,7 +11,7 @@ Notes:
 - Python's plugin are very various and many. I choose some as my personal experience only
 - Using Fedora 36 with default ```vim```, at the moment when writing this doc
 
-Personally I think that _the best practice to Enable VIM as Python IDE_ is https://realpython.com/vim-and-python-a-match-made-in-heaven/ with credits.
+Personally I think that _the best practice to Enable VIM as Python IDE_ is https://realpython.com/vim-and-python-a-match-made-in-heaven/ with credits. And I also fixed 2 defects in configuration, supplied by RealPython.com, with comment starting with `Jeff's Fix`
 
 My current ```~/.vimrc``` can be downloaded [./vimrc](scripts/vimrc_vundle)
 
@@ -50,7 +50,7 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 #### `~/.vimrc`
 
-Touch `~/.vimrc` and copy the following into it
+Touch `~/.vimrc` and copy the following into it. __Remember__ to execute `:wq` and `:PluginInstall` each time after adding new plugin(s) in `~/.vimrc`
 
 ```sh
 set nocompatible              " required
@@ -148,7 +148,7 @@ set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
 
-" There must be a "|" at the end of each set, to isolate
+" Jeff's Fix: there must be a "|" to isolate each "set" 
 au BufNewFile,BufRead *.py,*.md
     \ set tabstop=4 |
     \ set softtabstop=4 |
@@ -158,6 +158,7 @@ au BufNewFile,BufRead *.py,*.md
     \ set autoindent |
     \ set fileformat=unix
 
+" Jeff's Fix: there is NO whitespace between *.js and *.html, etc
 au BufNewFile,BufRead *.js,*.html,*.css,*.yml,*.yaml
     \ set tabstop=2 |
     \ set softtabstop=2 |
