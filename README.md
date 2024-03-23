@@ -159,7 +159,7 @@ au BufNewFile,BufRead *.py,*.md
     \ set fileformat=unix
 
 " Jeff's Fix: there is NO whitespace between *.js and *.html, etc
-au BufNewFile,BufRead *.js,*.html,*.css,*.yml,*.yaml
+au BufNewFile, BufRead *.js,*.html,*.css,*.yml,*.yaml
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2
