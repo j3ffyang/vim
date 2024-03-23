@@ -165,7 +165,7 @@ au BufNewFile,BufRead *.js,*.html,*.css,*.yml,*.yaml
     \ set shiftwidth=2
 
 " Flagging Unnecessary Whitespace
-" au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+au BufRead, BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " UTF-8 Support
 set encoding=utf-8
