@@ -1,0 +1,76 @@
+set nocompatible              " required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" add all your plugins here (note older versions of Vundle
+" used Bundle instead of Plugin)
+
+Bundle 'Valloric/YouCompleteMe'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" Syntax checking/ highlighting
+Plugin 'vim-syntastic/syntastic'
+Plugin 'nvie/vim-flake8'
+
+let python_highlight_all=1
+syntax on
+
+" super searching
+Plugin 'kien/ctrlp.vim'
+
+" Color schemes
+Plugin 'jnurmine/Zenburn'
+Plugin 'altercation/vim-colors-solarized'
+
+" auto-indentation
+Plugin 'vim-scripts/indentpython.vim'
+
+" file browsing
+Plugin 'scrooloose/nerdtree'
+" use tabs
+Plugin 'jistr/vim-nerdtree-tabs'
+" hide .pyc
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+
+" pep8
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" let python_highlight_all=1
+" syntax on
+
+set encoding=utf-8
+
+" vim python ide vim-flake8 how to ignore "line too long"
+let g:syntastic_python_flake8_args='--ignore=E501'
+let g:syntastic_python_flake8_args='--ignore=E402'
